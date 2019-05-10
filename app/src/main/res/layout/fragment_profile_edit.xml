@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/splashLogo"
+                    android:src="@mipmap/ic_launcher_foreground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_edit"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:layout_marginTop="18dp"/>
+
+            <ImageButton
+                    android:id="@+id/profileEdit_save"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/save"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="110dp"/>
+
+            <ImageButton
+                    android:id="@+id/profileEdit_close"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/close"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/people"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp">
+
+                <EditText
+                        android:id="@+id/profileEditName"
+                        android:layout_width="wrap_content"
+                        android:textSize="24sp"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        style="@style/TextAppearance.AppCompat.Title"/>
+
+                <EditText
+                        android:id="@+id/profileEditStatus"
+                        android:layout_width="wrap_content"
+                        android:textSize="24sp"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:layout_marginTop="10dp"/>
+
+                <EditText
+                        android:id="@+id/profileEditBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="Birthday"/>
+
+                <EditText
+                        android:id="@+id/profileEditCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="City"/>
+
+                <!--<androidx.recyclerview.widget.RecyclerView-->
+                <!--android:id="@+id/profileViewFeed"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

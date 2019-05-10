@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyVkClient</string>
+    <string name="profile_view">Profile</string>
+    <string name="profile_edit">Edit</string>
+    <string name="logout">Logout</string>
+    <string name="splash">Splash</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+</resources>
