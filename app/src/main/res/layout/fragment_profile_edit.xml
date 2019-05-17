@@ -2,8 +2,8 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -32,9 +32,10 @@
                     android:id="@+id/profileEdit_save"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/save"
+                    android:src="@drawable/check_24dp"
                     android:layout_marginTop="18dp"
-                    android:layout_marginLeft="110dp"/>
+                    android:layout_marginLeft="110dp"
+                    android:background=""/>
 
             <ImageButton
                     android:id="@+id/profileEdit_close"
@@ -42,7 +43,8 @@
                     android:layout_height="50dp"
                     android:src="@drawable/close"
                     android:layout_marginTop="18dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:background=""/>
 
         </LinearLayout>
 
@@ -58,58 +60,82 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
             <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/people"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="30dp"/>
-
-            <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:src="@drawable/myphoto"/>
+
+            <EditText
+                    android:id="@+id/profileEditName"
+                    android:layout_width="wrap_content"
+                    android:textSize="34sp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginLeft="30dp">
+                    android:text="Name"
+                    tools:text="Pavel Postnikov"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_marginLeft="10dp"/>
 
-                <EditText
-                        android:id="@+id/profileEditName"
-                        android:layout_width="wrap_content"
-                        android:textSize="24sp"
-                        android:layout_height="wrap_content"
-                        android:text="Name"
-                        style="@style/TextAppearance.AppCompat.Title"/>
+            <TextView
+                    android:id="@+id/profileEditStatusTitle"
+                    android:layout_width="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    tools:text="Status: "
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
-                <EditText
-                        android:id="@+id/profileEditStatus"
-                        android:layout_width="wrap_content"
-                        android:textSize="24sp"
-                        android:layout_height="wrap_content"
-                        android:text="Status"
-                        android:layout_marginTop="10dp"/>
+            <EditText
+                    android:id="@+id/profileEditStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="10dp"
+                    tools:text="CFT - the best company!"/>
 
-                <EditText
-                        android:id="@+id/profileEditBirthday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="24sp"
-                        android:text="Birthday"/>
+            <TextView
+                    android:id="@+id/profileEditBirthdayTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    tools:text="Birthday: "
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/TextAppearance.AppCompat.Title"/>
+            <EditText
+                    android:id="@+id/profileEditBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="24sp"
+                    tools:text="01 July 1997"/>
 
-                <EditText
-                        android:id="@+id/profileEditCity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="24sp"
-                        android:text="City"/>
+            <TextView
+                    android:id="@+id/profileEditCityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    tools:text="City: "
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
-                <!--<androidx.recyclerview.widget.RecyclerView-->
-                <!--android:id="@+id/profileViewFeed"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"/>-->
+            <EditText
+                    android:id="@+id/profileEditCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="10dp"
+                    tools:text="Tomsk"/>
 
-            </LinearLayout>
+
+            <!--<androidx.recyclerview.widget.RecyclerView-->
+            <!--android:id="@+id/profileViewFeed"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

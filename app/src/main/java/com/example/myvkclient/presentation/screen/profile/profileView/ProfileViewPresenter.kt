@@ -3,28 +3,30 @@ package com.example.myvkclient.presentation.screen.profile.profileView
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.example.myvkclient.App
+import com.example.myvkclient.presentation.common.BasePresenter
 import com.example.myvkclient.presentation.navigation.Screen
 import com.example.myvkclient.presentation.screen.profile.profileView.ProfileView
+import ru.terrakok.cicerone.Router
 
 @InjectViewState
-class ProfileViewPresenter : MvpPresenter<ProfileView>() {
+class ProfileViewPresenter(private val router: Router) : BasePresenter<ProfileView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
         viewState.showProfile("Pavel Postnikov")
-        viewState.showStatus("I'm is OK")
+        viewState.showStatus("CFT - the best company!")
         viewState.showCity("Tomsk")
-        viewState.showBirthday("1 July")
+        viewState.showBirthday("1 July 1997")
 
     }
 
     fun logout() {
-        App.INCTANCE.router.replaceScreen(Screen.LoginScreen())
+        router.newRootScreen(Screen.LoginScreen())
     }
 
     fun profileEdit() {
-        App.INCTANCE.router.replaceScreen(Screen.ProfileEditScreen())
+        router.newRootScreen(Screen.ProfileEditScreen())
     }
 
 }

@@ -9,7 +9,7 @@ import com.arellomobile.mvp.MvpAppCompatFragment
 
 abstract class BaseFragment(@LayoutRes private val layoutId: Int) : MvpAppCompatFragment() {
 
-    fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         inflater.inflate(layoutId, container, false)
 
 }

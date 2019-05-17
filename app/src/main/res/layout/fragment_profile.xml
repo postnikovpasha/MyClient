@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -48,61 +48,87 @@
             android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+>
 
             <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/people"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="30dp"/>
-
-            <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:src="@drawable/myphoto"/>
+
+            <TextView
+                    android:id="@+id/profileViewName"
+                    android:layout_width="wrap_content"
+                    android:textSize="34sp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginLeft="30dp">
+                    android:text="Name"
+                    tools:text="Pavel Postnikov"
+                    android:layout_marginLeft="10dp"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
-                <TextView
-                        android:id="@+id/profileViewName"
-                        android:layout_width="wrap_content"
-                        android:textSize="24sp"
-                        android:layout_height="wrap_content"
-                        android:text="Name"
-                        style="@style/TextAppearance.AppCompat.Title"/>
+            <TextView
+                    android:id="@+id/profileViewStatusTitle"
+                    android:layout_width="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    tools:text="Status: "
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
-                <TextView
-                        android:id="@+id/profileViewStatus"
-                        android:layout_width="wrap_content"
-                        android:textSize="24sp"
-                        android:layout_height="wrap_content"
-                        android:text="Status"
-                        android:layout_marginTop="10dp"/>
+            <TextView
+                    android:id="@+id/profileViewStatus"
+                    android:layout_width="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_height="wrap_content"
+                    tools:text="CFT - the best company!"
+                    android:layout_marginLeft="10dp"
+/>
 
-                <TextView
-                        android:id="@+id/profileViewBirthday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="24sp"
-                        android:text="Birthday"/>
+            <TextView
+                    android:id="@+id/profileViewBirthdayTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    tools:text="Birthday: "
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
-                <TextView
-                        android:id="@+id/profileViewCity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="24sp"
-                        android:text="City"/>
+            <TextView
+                    android:id="@+id/profileViewBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    tools:text="01 July 1997"
+                    android:layout_marginLeft="10dp"/>
 
-                <!--<androidx.recyclerview.widget.RecyclerView-->
-                <!--android:id="@+id/profileViewFeed"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"/>-->
+            <TextView
+                    android:id="@+id/profileViewCityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    tools:text="City: "
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
-            </LinearLayout>
+            <TextView
+                    android:id="@+id/profileViewCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    tools:text="Tomsk"
+                    android:layout_marginLeft="10dp"/>
+
+            <!--<androidx.recyclerview.widget.RecyclerView-->
+            <!--android:id="@+id/profileViewFeed"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

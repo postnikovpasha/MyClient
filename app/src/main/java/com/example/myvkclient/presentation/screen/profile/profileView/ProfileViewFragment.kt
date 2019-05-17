@@ -5,9 +5,9 @@ import android.view.View
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
+import kotlinx.android.synthetic.main.fragment_profile.*
 
-class ProfileViewFragment : BaseFragment(R.layout.fragment_profile),
-    ProfileView {
+class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView {
 
 
     @InjectPresenter
