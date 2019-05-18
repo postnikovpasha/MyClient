@@ -1,5 +1,6 @@
 package com.example.myvkclient
 
+import com.example.myvkclient.presentation.screen.login.LoginPresenter
 import com.example.myvkclient.presentation.screen.main.MainPresenter
 import com.example.myvkclient.presentation.screen.profile.profileEdit.ProfileEditPresenter
 import com.example.myvkclient.presentation.screen.profile.profileView.ProfileViewPresenter
@@ -18,4 +19,5 @@ val presentationModule = module {
     factory { MainPresenter(get()) }
     factory { ProfileViewPresenter(get()) }
     factory { ProfileEditPresenter(get()) }
+    factory {LoginPresenter(get())}
 }

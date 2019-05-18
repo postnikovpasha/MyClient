@@ -3,15 +3,21 @@ package com.example.myvkclient.presentation.screen.profile.profileView
 import android.os.Bundle
 import android.view.View
 import com.arellomobile.mvp.presenter.InjectPresenter
+import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
+import com.example.myvkclient.presentation.screen.main.MainPresenter
 import kotlinx.android.synthetic.main.fragment_profile.*
+import org.koin.android.ext.android.get
 
 class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView {
 
 
     @InjectPresenter
     lateinit var presenter: ProfileViewPresenter
+
+    @ProvidePresenter
+    fun providePresenter(): ProfileViewPresenter = get()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

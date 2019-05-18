@@ -19,6 +19,7 @@ class ProfileEditPresenter(private val router: Router) : BasePresenter<ProfileEd
     // ВОЗМОЖНО СМЕНЮ НЕМНОГО ЛОГИКУ
     fun save() {
         // НЕ РАЗОБРАЛСЯ С КОНТЕКСТОМ + ТУТ БУДУТ ЕЩЕ ДЕЙСТВИЯ И AlertDialog
+        router.replaceScreen(Screen.ProfileViewScreen())
     }
 
 

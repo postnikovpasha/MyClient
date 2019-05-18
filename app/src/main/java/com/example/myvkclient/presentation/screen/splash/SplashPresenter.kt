@@ -13,7 +13,7 @@ class SplashPresenter(private val router: Router) : BasePresenter<SplashView>() 
         super.onFirstViewAttach()
 
         Handler().postDelayed({
-            router.newRootScreen(Screen.ProfileViewScreen())
+            router.newRootScreen(Screen.LoginScreen())
         }, 2000)
     }
 }

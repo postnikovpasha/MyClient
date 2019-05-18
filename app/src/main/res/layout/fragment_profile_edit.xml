@@ -35,7 +35,8 @@
                     android:src="@drawable/check_24dp"
                     android:layout_marginTop="18dp"
                     android:layout_marginLeft="110dp"
-                    android:background=""/>
+                    android:background="@color/colorPrimary"
+/>
 
             <ImageButton
                     android:id="@+id/profileEdit_close"
@@ -44,7 +45,8 @@
                     android:src="@drawable/close"
                     android:layout_marginTop="18dp"
                     android:layout_marginLeft="10dp"
-                    android:background=""/>
+                    android:background="@color/colorPrimary"
+/>
 
         </LinearLayout>
 
@@ -72,8 +74,7 @@
                     android:layout_width="wrap_content"
                     android:textSize="34sp"
                     android:layout_height="wrap_content"
-                    android:text="Name"
-                    tools:text="Pavel Postnikov"
+                    android:text="Pavel Postnikov"
                     style="@style/TextAppearance.AppCompat.Title"
                     android:layout_marginLeft="10dp"/>
 
@@ -82,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:textSize="24sp"
                     android:layout_height="wrap_content"
-                    tools:text="Status: "
+                    android:text="Status: "
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     style="@style/TextAppearance.AppCompat.Title"/>
@@ -93,14 +94,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
                     android:layout_marginLeft="10dp"
-                    tools:text="CFT - the best company!"/>
+                    android:text="CFT - the best company!"/>
 
             <TextView
                     android:id="@+id/profileEditBirthdayTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
-                    tools:text="Birthday: "
+                    android:text="Birthday: "
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     style="@style/TextAppearance.AppCompat.Title"/>
@@ -110,14 +111,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="24sp"
-                    tools:text="01 July 1997"/>
+                    android:text="01 July 1997"/>
 
             <TextView
                     android:id="@+id/profileEditCityTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
-                    tools:text="City: "
+                    android:text="City: "
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     style="@style/TextAppearance.AppCompat.Title"/>
@@ -128,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
                     android:layout_marginLeft="10dp"
-                    tools:text="Tomsk"/>
+                    android:text="Tomsk"/>
 
 
             <!--<androidx.recyclerview.widget.RecyclerView-->

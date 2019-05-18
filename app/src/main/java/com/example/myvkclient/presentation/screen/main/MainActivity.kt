@@ -8,6 +8,7 @@ import com.example.myvkclient.R
 import com.example.myvkclient.presentation.navigation.Navigator
 import com.example.myvkclient.presentation.navigation.Screen
 import org.koin.android.ext.android.get
+import org.koin.android.ext.android.inject
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
