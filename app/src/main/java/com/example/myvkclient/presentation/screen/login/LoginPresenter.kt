@@ -6,9 +6,10 @@ import com.example.myvkclient.presentation.common.BasePresenter
 import com.example.myvkclient.presentation.navigation.Screen
 import com.example.myvkclient.presentation.screen.main.MainView
 import ru.terrakok.cicerone.Router
+import javax.inject.Inject
 
 @InjectViewState
-class LoginPresenter(private val router: Router) : BasePresenter<LoginView>() {
+class LoginPresenter@Inject constructor(private val router: Router) : BasePresenter<LoginView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()

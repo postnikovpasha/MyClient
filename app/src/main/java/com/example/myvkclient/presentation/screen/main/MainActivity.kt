@@ -1,35 +1,45 @@
 package com.example.myvkclient.presentation.screen.main
 
 import android.os.Bundle
-import com.arellomobile.mvp.MvpAppCompatActivity
+import androidx.fragment.app.Fragment
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
+import com.example.myvkclient.presentation.moxy.MvpAppCompatActivity
 import com.example.myvkclient.presentation.navigation.Navigator
-import com.example.myvkclient.presentation.navigation.Screen
-import org.koin.android.ext.android.get
-import org.koin.android.ext.android.inject
+import dagger.android.AndroidInjection
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.HasSupportFragmentInjector
 import ru.terrakok.cicerone.NavigatorHolder
-import ru.terrakok.cicerone.Router
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
+import javax.inject.Inject
 
-class MainActivity : com.example.myvkclient.presentation.moxy.MvpAppCompatActivity(), MainView {
+class MainActivity : MvpAppCompatActivity(), HasSupportFragmentInjector, MainView {
 
+    @Inject
     @InjectPresenter
     lateinit var presenter: MainPresenter
 
     @ProvidePresenter
-    fun providePresenter(): MainPresenter = get()
+    fun providePresenter(): MainPresenter = presenter
 
-    private val navigatorHolder by inject<NavigatorHolder>()
-    private val router by inject<Router>()
+    @Inject
+    lateinit var supportFragmentInjectorImpl: DispatchingAndroidInjector<Fragment>
 
-    private lateinit var navigator: SupportAppNavigator
+    override fun supportFragmentInjector(): AndroidInjector<Fragment> = supportFragmentInjectorImpl
+
+    @Inject
+    lateinit var navigatorHolder: NavigatorHolder
+
+    private val navigator: SupportAppNavigator by lazy {
+        Navigator(this, supportFragmentManager, R.id.content)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        navigator = Navigator(this, supportFragmentManager, R.id.content)
     }
 
     override fun onResume() {

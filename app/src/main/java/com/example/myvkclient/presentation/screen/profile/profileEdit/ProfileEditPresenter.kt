@@ -6,9 +6,10 @@ import com.example.myvkclient.App
 import com.example.myvkclient.presentation.common.BasePresenter
 import com.example.myvkclient.presentation.navigation.Screen
 import ru.terrakok.cicerone.Router
+import javax.inject.Inject
 
 @InjectViewState
-class ProfileEditPresenter(private val router: Router) : BasePresenter<ProfileEditView>() {
+class ProfileEditPresenter @Inject constructor(private val router: Router) : BasePresenter<ProfileEditView>() {
 
 
     override fun onFirstViewAttach() {

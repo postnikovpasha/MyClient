@@ -6,7 +6,7 @@ import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
 import com.example.myvkclient.presentation.screen.profile.profileView.ProfileViewPresenter
 import kotlinx.android.synthetic.main.fragment_profile_edit.*
-import org.koin.android.ext.android.get
+import javax.inject.Inject
 
 
 class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), ProfileEditView {
@@ -29,11 +29,12 @@ class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), Profil
     }
 
 
+    @Inject
     @InjectPresenter
     lateinit var presenter: ProfileEditPresenter
 
     @ProvidePresenter
-    fun providePresenter(): ProfileEditPresenter = get()
+    fun providePresenter(): ProfileEditPresenter = presenter
 
     override fun onResume() {
         super.onResume()

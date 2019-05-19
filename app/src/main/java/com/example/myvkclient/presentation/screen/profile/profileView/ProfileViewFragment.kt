@@ -6,18 +6,18 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
-import com.example.myvkclient.presentation.screen.main.MainPresenter
 import kotlinx.android.synthetic.main.fragment_profile.*
-import org.koin.android.ext.android.get
+import javax.inject.Inject
 
 class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView {
 
 
+    @Inject
     @InjectPresenter
     lateinit var presenter: ProfileViewPresenter
 
     @ProvidePresenter
-    fun providePresenter(): ProfileViewPresenter = get()
+    fun providePresenter(): ProfileViewPresenter = presenter
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
