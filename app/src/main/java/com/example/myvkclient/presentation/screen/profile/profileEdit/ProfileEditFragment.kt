@@ -4,7 +4,6 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
-import com.example.myvkclient.presentation.screen.profile.profileView.ProfileViewPresenter
 import kotlinx.android.synthetic.main.fragment_profile_edit.*
 import javax.inject.Inject
 

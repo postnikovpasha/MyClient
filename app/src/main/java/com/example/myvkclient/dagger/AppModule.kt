@@ -12,3 +12,4 @@ interface AppModule {
     @ContributesAndroidInjector(modules = [MainActivityModule::class])
     fun provideMainActivity(): MainActivity
 }
+
