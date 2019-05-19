@@ -13,7 +13,7 @@ import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
 
-class MainActivity : MvpAppCompatActivity(), MainView {
+class MainActivity : com.example.myvkclient.presentation.moxy.MvpAppCompatActivity(), MainView {
 
     @InjectPresenter
     lateinit var presenter: MainPresenter
