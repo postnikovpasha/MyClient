@@ -15,6 +15,11 @@ class ProfileEditPresenter @Inject constructor(private val router: Router) : Bas
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
+        viewState.showProfile("Pavel Postnikov")
+        viewState.showStatus("CFT - the best company!")
+        viewState.showCity("Tomsk")
+        viewState.showBirthday("1 July 1997")
+
     }
 
     // ВОЗМОЖНО СМЕНЮ НЕМНОГО ЛОГИКУ

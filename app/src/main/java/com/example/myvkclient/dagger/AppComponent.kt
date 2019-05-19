@@ -7,11 +7,14 @@ import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 
 @Singleton
-@Component(modules = [
-    AndroidSupportInjectionModule::class,
-    AppModule::class,
-    NavigationModule::class
-])
+@Component(
+    modules = [
+        AndroidSupportInjectionModule::class,
+        AppModule::class,
+        NavigationModule::class,
+        DataModule::class
+    ]
+)
 interface AppComponent : AndroidInjector<App> {
 
     @Component.Factory

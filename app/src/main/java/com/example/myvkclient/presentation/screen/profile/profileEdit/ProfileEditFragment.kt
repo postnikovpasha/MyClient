@@ -1,30 +1,31 @@
 package com.example.myvkclient.presentation.screen.profile.profileEdit
 
+import android.text.Editable
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
+import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile_edit.*
 import javax.inject.Inject
 
 
 class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), ProfileEditView {
 
-    //ЭТИ МЕТОДЫ ПОКА НЕ НУЖНЫ
     override fun showProfile(firstName: String) {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        profileEditName.text = Editable.Factory.getInstance().newEditable(firstName)
     }
 
     override fun showStatus(status: String) {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        profileEditStatus.text = Editable.Factory.getInstance().newEditable(status)
     }
 
     override fun showCity(city: String) {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        profileEditCity.text = Editable.Factory.getInstance().newEditable(city)
     }
 
     override fun showBirthday(birthday: String) {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        profileEditBirthday.text = Editable.Factory.getInstance().newEditable(birthday)
     }
 
 
