@@ -7,4 +7,6 @@ interface ProfileEditView : MvpView {
     fun showStatus(status: String)
     fun showCity(city: String)
     fun showBirthday(birthday: String)
+
+    fun showMessage(message: String)
 }

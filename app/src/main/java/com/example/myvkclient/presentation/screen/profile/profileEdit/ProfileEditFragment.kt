@@ -1,6 +1,7 @@
 package com.example.myvkclient.presentation.screen.profile.profileEdit
 
 import android.text.Editable
+import android.widget.Toast
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
@@ -11,7 +12,6 @@ import javax.inject.Inject
 
 
 class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), ProfileEditView {
-
     override fun showName(firstName: String) {
         profileEditName.text = Editable.Factory.getInstance().newEditable(firstName)
     }
@@ -26,6 +26,10 @@ class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), Profil
 
     override fun showBirthday(birthday: String) {
         profileEditBirthday.text = Editable.Factory.getInstance().newEditable(birthday)
+    }
+
+    override fun showMessage(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
 

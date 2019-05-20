@@ -28,15 +28,17 @@ class ProfileEditPresenter @Inject constructor(
 
     }
 
-    // ВОЗМОЖНО СМЕНЮ НЕМНОГО ЛОГИКУ
+
     fun save() {
-        // НЕ РАЗОБРАЛСЯ С КОНТЕКСТОМ + ТУТ БУДУТ ЕЩЕ ДЕЙСТВИЯ И AlertDialog
+        //TODO("БУДУТ ЕЩЕ ДЕЙСТВИЯ И AlertDialog")
+        viewState.showMessage("SAVE")
         router.replaceScreen(Screen.ProfileViewScreen())
     }
 
 
     fun close() {
-        // НЕ РАЗОБРАЛСЯ С КОНТЕКСТОМ + ТУТ БУДУТ ЕЩЕ ДЕЙСТВИЯ И AlertDialog
+        //TODO("БУДУТ ЕЩЕ ДЕЙСТВИЯ И AlertDialog")
+        viewState.showMessage("DONT SAVE")
         router.replaceScreen(Screen.ProfileViewScreen())
     }
 
