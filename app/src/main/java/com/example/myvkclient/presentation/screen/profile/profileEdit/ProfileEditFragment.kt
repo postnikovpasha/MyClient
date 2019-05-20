@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), ProfileEditView {
 
-    override fun showProfile(firstName: String) {
+    override fun showName(firstName: String) {
         profileEditName.text = Editable.Factory.getInstance().newEditable(firstName)
     }
 

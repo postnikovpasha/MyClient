@@ -4,7 +4,7 @@ import com.arellomobile.mvp.MvpView
 import com.example.myvkclient.presentation.screen.profile.feed.BaseMessage
 
 interface ProfileView : MvpView {
-    fun showProfile(firstName: String)
+    fun showName(firstName: String)
     fun showStatus(status: String)
     fun showCity(city: String)
     fun showBirthday(birthday: String)

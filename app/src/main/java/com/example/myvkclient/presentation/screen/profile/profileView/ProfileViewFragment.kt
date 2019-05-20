@@ -37,7 +37,7 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView
         profileViewFeed.adapter = feedAdapter
     }
 
-    override fun showProfile(firstName: String) {
+    override fun showName(firstName: String) {
         profileViewName.text = firstName
     }
 
