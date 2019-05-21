@@ -59,7 +59,8 @@
             android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -68,76 +69,120 @@
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/myphoto"/>
+                    android:src="@drawable/myphoto"
+                    android:id="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" tools:layout_editor_absoluteX="0dp"/>
+
+            <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_account"
+                    android:id="@+id/imageView2"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toTopOf="@+id/profileEditName"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
 
             <EditText
                     android:id="@+id/profileEditName"
                     android:layout_width="wrap_content"
-                    android:textSize="34sp"
+                    android:textSize="28sp"
                     android:layout_height="wrap_content"
                     android:text="Your name"
+                    android:inputType="text"
                     style="@style/TextAppearance.AppCompat.Title"
-                    android:layout_marginLeft="10dp"/>
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2" android:layout_marginStart="8dp"/>
+            <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_comment"
+                    android:id="@+id/imageView3" android:layout_marginTop="32dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2"/>
 
             <TextView
                     android:id="@+id/profileEditStatusTitle"
                     android:layout_width="wrap_content"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:layout_height="wrap_content"
                     android:text="Status: "
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    style="@style/TextAppearance.AppCompat.Title"/>
+                    android:textColor="@color/text_profile"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3"/>
 
             <EditText
                     android:id="@+id/profileEditStatus"
                     android:layout_width="wrap_content"
+                    android:textSize="18sp"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Your status"/>
+                    android:text="Your status"
+                    android:inputType="text"
+                    app:layout_constraintStart_toEndOf="@+id/profileEditStatusTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/profileEditName" android:layout_marginTop="4dp"/>
+
+            <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_gift"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/imageView4" app:layout_constraintStart_toStartOf="@+id/imageView3"
+            />
 
             <TextView
                     android:id="@+id/profileEditBirthdayTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:text="Birthday: "
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    style="@style/TextAppearance.AppCompat.Title"/>
+                    android:textColor="@color/text_profile"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4"/>
+
             <EditText
                     android:id="@+id/profileEditBirthday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24sp"
-                    android:text="Your birthday"/>
+                    android:textSize="18sp"
+                    tools:text="Your birthday"
+                    app:layout_constraintStart_toEndOf="@+id/profileEditBirthdayTitle"
+                    android:inputType="date"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/profileEditStatusTitle"/>
+
+            <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_city"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                    android:layout_marginTop="16dp" android:id="@+id/imageView5"
+                    app:layout_constraintStart_toStartOf="@+id/imageView4"/>
 
             <TextView
                     android:id="@+id/profileEditCityTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:text="City: "
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    style="@style/TextAppearance.AppCompat.Title"/>
+                    android:textColor="@color/text_profile"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5" android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5"/>
 
             <EditText
                     android:id="@+id/profileEditCity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Your city"/>
+                    android:textSize="18sp"
+                    tools:text="Your city"
+                    app:layout_constraintStart_toEndOf="@+id/profileEditCityTitle"
+                    android:layout_marginStart="8dp"
+                    android:inputType="text" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/profileEditBirthdayTitle"/>
 
-
-            <!--<androidx.recyclerview.widget.RecyclerView-->
-            <!--android:id="@+id/profileViewFeed"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"/>-->
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
