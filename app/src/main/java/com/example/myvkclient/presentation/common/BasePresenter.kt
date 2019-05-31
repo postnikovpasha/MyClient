@@ -17,4 +17,5 @@ abstract class BasePresenter<T : MvpView> : MvpPresenter<T>() {
     fun Disposable.untilDestroy() {
         compositeDisposable.add(this)
     }
+
 }

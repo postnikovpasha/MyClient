@@ -1,4 +1,4 @@
-package com.example.myvkclient.dagger
+package com.example.myvkclient.dagger.module.peresentation
 
 import dagger.Module
 import dagger.Provides

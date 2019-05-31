@@ -1,7 +1,7 @@
 package com.example.myvkclient.presentation.screen.profile.feed
 
 class PostMessage(
-    id: Int,
+    id: Long,
     val message: String,
     val image: String
 ) : BaseMessage(id)

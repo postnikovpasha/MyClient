@@ -41,6 +41,7 @@
             android:gravity="center"
             android:textSize="20sp"
             android:padding="15dp"
+            android:maxLines="1"
             android:layout_marginTop="230dp"/>
 
     <EditText
@@ -49,9 +50,10 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            android:inputType="textPassword"
             android:backgroundTint="#4680C2"
             android:gravity="center"
-
+            android:maxLines="1"
             android:textSize="20sp"
             android:padding="15dp"/>
 

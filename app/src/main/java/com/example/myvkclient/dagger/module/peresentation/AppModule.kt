@@ -1,5 +1,6 @@
-package com.example.myvkclient.dagger
+package com.example.myvkclient.dagger.module.peresentation
 
+import com.example.myvkclient.dagger.ActivityScope
 import com.example.myvkclient.presentation.screen.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

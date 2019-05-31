@@ -1,5 +1,6 @@
-package com.example.myvkclient.dagger
+package com.example.myvkclient.dagger.module.peresentation
 
+import com.example.myvkclient.dagger.FragmentScope
 import com.example.myvkclient.presentation.screen.login.LoginFragment
 import com.example.myvkclient.presentation.screen.profile.profileEdit.ProfileEditFragment
 import com.example.myvkclient.presentation.screen.profile.profileView.ProfileViewFragment

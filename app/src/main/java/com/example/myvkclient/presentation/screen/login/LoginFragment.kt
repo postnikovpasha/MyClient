@@ -1,5 +1,6 @@
 package com.example.myvkclient.presentation.screen.login
 
+import android.widget.Toast
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
@@ -22,8 +23,12 @@ class LoginFragment : BaseFragment(R.layout.fragment_login), LoginView {
         super.onResume()
 
         login_buttonLogin.setOnClickListener {
-            presenter.login()
+            presenter.login(login_etLogin.text.toString(), login_etPassword.text.toString())
         }
+    }
+
+    override fun shomMessage(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
 }

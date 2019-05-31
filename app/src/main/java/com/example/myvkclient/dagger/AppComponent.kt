@@ -1,6 +1,8 @@
 package com.example.myvkclient.dagger
 
 import com.example.myvkclient.App
+import com.example.myvkclient.dagger.module.data.DataModule
+import com.example.myvkclient.dagger.module.peresentation.PresentationModule
 import dagger.Component
 import javax.inject.Singleton
 import dagger.android.AndroidInjector
@@ -10,8 +12,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
-        AppModule::class,
-        NavigationModule::class,
+        PresentationModule::class,
         DataModule::class
     ]
 )

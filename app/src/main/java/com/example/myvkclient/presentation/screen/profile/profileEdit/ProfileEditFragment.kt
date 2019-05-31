@@ -6,30 +6,51 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
-import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile_edit.*
 import javax.inject.Inject
 
 
 class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), ProfileEditView {
+
+//    override fun getName(): String = profileViewName.text.toString()
+//
+//    override fun getLastName(): String = profileViewLastName.text.toString()
+//
+//    override fun getStatus(): String = profileViewStatus.text.toString()
+//
+//    override fun getCity(): String = profileViewCity.text.toString()
+//
+//    override fun getBirthday(): String = profileViewBirthday.text.toString()
+//
+//    override fun getPhone(): String = profileViewPhone.text.toString()
+
+
     override fun showName(firstName: String) {
-        profileEditName.text = Editable.Factory.getInstance().newEditable(firstName)
+        profileViewName.text = Editable.Factory.getInstance().newEditable(firstName)
+    }
+
+    override fun showLastName(lastName: String) {
+        profileViewLastName.text = Editable.Factory.getInstance().newEditable(lastName)
     }
 
     override fun showStatus(status: String) {
-        profileEditStatus.text = Editable.Factory.getInstance().newEditable(status)
+        profileViewStatus.text = Editable.Factory.getInstance().newEditable(status)
     }
 
     override fun showCity(city: String) {
-        profileEditCity.text = Editable.Factory.getInstance().newEditable(city)
+        profileViewCity.text = Editable.Factory.getInstance().newEditable(city)
     }
 
     override fun showBirthday(birthday: String) {
-        profileEditBirthday.text = Editable.Factory.getInstance().newEditable(birthday)
+        profileViewBirthday.text = Editable.Factory.getInstance().newEditable(birthday)
     }
 
     override fun showMessage(message: String) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun showPhone(phone: String) {
+        profileViewPhone.text = Editable.Factory.getInstance().newEditable(phone)
     }
 
 
@@ -43,7 +64,14 @@ class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), Profil
     override fun onResume() {
         super.onResume()
         profileEdit_save.setOnClickListener {
-            presenter.save()
+            presenter.save(
+                profileViewName.text.toString(),
+                profileViewLastName.text.toString(),
+                profileViewStatus.text.toString(),
+                profileViewCity.text.toString(),
+                profileViewBirthday.text.toString(),
+                profileViewPhone.text.toString()
+            )
         }
 
         profileEdit_close.setOnClickListener {

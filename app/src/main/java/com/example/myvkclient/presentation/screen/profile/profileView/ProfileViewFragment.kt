@@ -13,7 +13,10 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 import javax.inject.Inject
 
 class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView {
+    companion object {
 
+        fun createInstance() = ProfileViewFragment()
+    }
 
     @Inject
     @InjectPresenter
@@ -22,13 +25,15 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView
     @ProvidePresenter
     fun providePresenter(): ProfileViewPresenter = presenter
 
-    private val feedAdapter = FeedAdapter()
+    private val feedAdapter = FeedAdapter { presenter.loadPosts() }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar()
         initFeed()
+
+        profileRefreshLayout.setOnRefreshListener(presenter::refreshPosts)
     }
 
     private fun initFeed() {
@@ -39,6 +44,10 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView
 
     override fun showName(firstName: String) {
         profileViewName.text = firstName
+    }
+
+    override fun showLastName(lastName: String) {
+        profileViewLastName.text = lastName
     }
 
     override fun showStatus(status: String) {
@@ -53,9 +62,30 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView
         profileViewBirthday.text = birthday
     }
 
+    override fun showPhone(phone: String) {
+        profileViewPhone.text = phone
+    }
+
     override fun showFeed(items: List<BaseMessage>) {
         feedAdapter.setItems(items)
     }
+
+    override fun showEmptyFeed() {
+    }
+
+    override fun showProgress() {
+        profileProgressBar.visibility = View.VISIBLE
+    }
+
+    override fun hideProgress() {
+        profileRefreshLayout.isRefreshing = false
+        profileProgressBar.visibility = View.GONE
+    }
+
+    override fun showErrorFeed() {
+
+    }
+
 
     private fun initToolbar() {
         profileViewToolbar.inflateMenu(R.menu.menu_profile_view)
