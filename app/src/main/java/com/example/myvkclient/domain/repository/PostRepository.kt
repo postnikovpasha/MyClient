@@ -10,5 +10,5 @@ interface PostRepository {
 
     fun getPost(id: Long): Post
 
-    //fun getAll(): List<BaseMessage>
+    fun getAll(): List<BaseMessage>
 }

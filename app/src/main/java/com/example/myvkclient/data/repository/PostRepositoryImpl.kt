@@ -35,14 +35,14 @@ class PostRepositoryImpl @Inject constructor(
         .subscribeOn(Schedulers.io())
         .map(postsConverter::convert)
 
-//        override fun getAll(): List<BaseMessage> = (1..100).map {
-//            PostMessage(
-//                it.toLong(),
-//                "Message".repeat(30),
-//                "https://picsum.photos/id/$it/200/300"
-//            )
-//
-//    }
+        override fun getAll(): List<BaseMessage> = (1..100).map {
+            PostMessage(
+                it.toLong(),
+                "Message".repeat(30),
+                "https://picsum.photos/id/$it/200/300"
+            )
+
+    }
 
     override fun getPost(id: Long): Post {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

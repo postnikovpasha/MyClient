@@ -46,7 +46,7 @@ class ProfileViewPresenter @Inject constructor(
                     PostMessage(
                         it.id,
                         "Number ${it.id}",
-                       "https://picsum.photos/id/$it/200/300"
+                        "https://picsum.photos/id/${it.id}/200/300"
                     )
                 })
             }
