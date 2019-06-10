@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.fragment_profile_edit.*
 import javax.inject.Inject
 
 
-class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit), ProfileEditView {
+class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit, false), ProfileEditView {
 
 //    override fun getName(): String = profileViewName.text.toString()
 //

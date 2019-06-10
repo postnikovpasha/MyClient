@@ -8,7 +8,7 @@ import com.example.myvkclient.presentation.common.BaseFragment
 import javax.inject.Inject
 import kotlinx.android.synthetic.main.fragment_login.*
 
-class LoginFragment : BaseFragment(R.layout.fragment_login), LoginView {
+class LoginFragment : BaseFragment(R.layout.fragment_login, false), LoginView {
 
 
     @Inject

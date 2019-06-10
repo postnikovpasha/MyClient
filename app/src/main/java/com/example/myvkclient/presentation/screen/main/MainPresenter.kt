@@ -13,4 +13,16 @@ class MainPresenter@Inject constructor(private val router: Router) : BasePresent
         super.onFirstViewAttach()
         router.newRootScreen(Screen.SplashScreen())
     }
+
+    fun replaceOnProfile() {
+        router.replaceScreen(Screen.ProfileViewScreen())
+    }
+
+    fun replaceOnMessage() {
+        router.replaceScreen(Screen.MessageScreen())
+    }
+
+    fun replaseOnNews() {
+        router.replaceScreen(Screen.NewsScreen())
+    }
 }

@@ -12,7 +12,7 @@ import com.example.myvkclient.presentation.screen.profile.feed.FeedAdapter
 import kotlinx.android.synthetic.main.fragment_profile.*
 import javax.inject.Inject
 
-class ProfileViewFragment : BaseFragment(R.layout.fragment_profile), ProfileView {
+class ProfileViewFragment : BaseFragment(R.layout.fragment_profile, true), ProfileView {
     companion object {
 
         fun createInstance() = ProfileViewFragment()
