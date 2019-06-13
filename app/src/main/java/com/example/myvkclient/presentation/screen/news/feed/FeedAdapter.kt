@@ -1,16 +1,13 @@
-package com.example.myvkclient.presentation.screen.profile.feed
+package com.example.myvkclient.presentation.screen.news.feed
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.loadImage
 import kotlinx.android.synthetic.main.item_post_message.view.*
 import java.lang.IllegalArgumentException
-import kotlin.coroutines.coroutineContext
 
 class FeedAdapter (private val onLoadPosts: () -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     companion object {

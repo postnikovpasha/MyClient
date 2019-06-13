@@ -7,10 +7,9 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
-import com.example.myvkclient.presentation.screen.profile.feed.BaseMessage
-import com.example.myvkclient.presentation.screen.profile.feed.FeedAdapter
+import com.example.myvkclient.presentation.screen.news.feed.BaseMessage
+import com.example.myvkclient.presentation.screen.news.feed.FeedAdapter
 import kotlinx.android.synthetic.main.fragment_news.*
-import kotlinx.android.synthetic.main.fragment_profile.*
 import javax.inject.Inject
 
 class NewsFragment: BaseFragment(R.layout.fragment_news, true), NewsView {

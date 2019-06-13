@@ -6,8 +6,6 @@ import com.example.myvkclient.data.network.Api
 import com.example.myvkclient.data.response.PostResponse
 import com.example.myvkclient.domain.entity.Post
 import com.example.myvkclient.domain.repository.PostRepository
-import com.example.myvkclient.presentation.screen.profile.feed.BaseMessage
-import com.example.myvkclient.presentation.screen.profile.feed.PostMessage
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject

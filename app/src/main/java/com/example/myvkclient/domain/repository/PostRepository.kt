@@ -1,7 +1,6 @@
 package com.example.myvkclient.domain.repository
 
 import com.example.myvkclient.domain.entity.Post
-import com.example.myvkclient.presentation.screen.profile.feed.BaseMessage
 import io.reactivex.Single
 
 interface PostRepository {

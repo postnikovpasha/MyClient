@@ -7,8 +7,7 @@ import com.example.myvkclient.domain.repository.PostRepository
 import com.example.myvkclient.presentation.common.BasePresenter
 import com.example.myvkclient.presentation.common.Paginator
 import com.example.myvkclient.presentation.navigation.Screen
-import com.example.myvkclient.presentation.screen.message.MessageView
-import com.example.myvkclient.presentation.screen.profile.feed.PostMessage
+import com.example.myvkclient.presentation.screen.news.feed.PostMessage
 import io.reactivex.android.schedulers.AndroidSchedulers
 import ru.terrakok.cicerone.Router
 import javax.inject.Inject

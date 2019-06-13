@@ -1,4 +1,4 @@
-package com.example.myvkclient.presentation.screen.profile.feed
+package com.example.myvkclient.presentation.screen.news.feed
 
 class PostMessage(
     id: Long,

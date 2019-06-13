@@ -1,7 +1,7 @@
 package com.example.myvkclient.presentation.screen.news
 
 import com.arellomobile.mvp.MvpView
-import com.example.myvkclient.presentation.screen.profile.feed.BaseMessage
+import com.example.myvkclient.presentation.screen.news.feed.BaseMessage
 
 interface NewsView: MvpView {
     fun showFeed(items: List<BaseMessage>)

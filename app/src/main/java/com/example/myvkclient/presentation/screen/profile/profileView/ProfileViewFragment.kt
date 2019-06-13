@@ -2,13 +2,10 @@ package com.example.myvkclient.presentation.screen.profile.profileView
 
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
-import com.example.myvkclient.presentation.screen.profile.feed.BaseMessage
-import com.example.myvkclient.presentation.screen.profile.feed.FeedAdapter
 import kotlinx.android.synthetic.main.fragment_news.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.profileViewToolbar

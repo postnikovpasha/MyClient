@@ -2,14 +2,10 @@ package com.example.myvkclient.presentation.screen.profile.profileView
 
 import com.arellomobile.mvp.InjectViewState
 import com.example.myvkclient.data.datasource.SessionDataSource
-import com.example.myvkclient.domain.entity.Post
 import com.example.myvkclient.domain.repository.PostRepository
 import com.example.myvkclient.domain.repository.ProfileRepository
 import com.example.myvkclient.presentation.common.BasePresenter
-import com.example.myvkclient.presentation.common.Paginator
 import com.example.myvkclient.presentation.navigation.Screen
-import com.example.myvkclient.presentation.screen.profile.feed.PostMessage
-import io.reactivex.android.schedulers.AndroidSchedulers
 import ru.terrakok.cicerone.Router
 import javax.inject.Inject
 
