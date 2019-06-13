@@ -9,7 +9,9 @@ import com.example.myvkclient.R
 import com.example.myvkclient.presentation.common.BaseFragment
 import com.example.myvkclient.presentation.screen.profile.feed.BaseMessage
 import com.example.myvkclient.presentation.screen.profile.feed.FeedAdapter
+import kotlinx.android.synthetic.main.fragment_news.*
 import kotlinx.android.synthetic.main.fragment_profile.*
+import kotlinx.android.synthetic.main.fragment_profile.profileViewToolbar
 import javax.inject.Inject
 
 class ProfileViewFragment : BaseFragment(R.layout.fragment_profile, true), ProfileView {
@@ -25,22 +27,11 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile, true), Profi
     @ProvidePresenter
     fun providePresenter(): ProfileViewPresenter = presenter
 
-    private val feedAdapter = FeedAdapter { presenter.loadPosts() }
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar()
-        initFeed()
-
-        profileRefreshLayout.setOnRefreshListener(presenter::refreshPosts)
     }
 
-    private fun initFeed() {
-        profileViewFeed.isNestedScrollingEnabled = false
-        profileViewFeed.layoutManager = LinearLayoutManager(context)
-        profileViewFeed.adapter = feedAdapter
-    }
 
     override fun showName(firstName: String) {
         profileViewName.text = firstName
@@ -64,10 +55,6 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile, true), Profi
 
     override fun showPhone(phone: String) {
         profileViewPhone.text = phone
-    }
-
-    override fun showFeed(items: List<BaseMessage>) {
-        feedAdapter.setItems(items)
     }
 
     override fun showEmptyFeed() {

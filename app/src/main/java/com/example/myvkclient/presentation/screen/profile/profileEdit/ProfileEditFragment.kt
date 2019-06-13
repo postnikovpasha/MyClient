@@ -12,18 +12,6 @@ import javax.inject.Inject
 
 class ProfileEditFragment : BaseFragment(R.layout.fragment_profile_edit, false), ProfileEditView {
 
-//    override fun getName(): String = profileViewName.text.toString()
-//
-//    override fun getLastName(): String = profileViewLastName.text.toString()
-//
-//    override fun getStatus(): String = profileViewStatus.text.toString()
-//
-//    override fun getCity(): String = profileViewCity.text.toString()
-//
-//    override fun getBirthday(): String = profileViewBirthday.text.toString()
-//
-//    override fun getPhone(): String = profileViewPhone.text.toString()
-
 
     override fun showName(firstName: String) {
         profileViewName.text = Editable.Factory.getInstance().newEditable(firstName)

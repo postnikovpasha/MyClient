@@ -21,50 +21,6 @@ class ProfileViewPresenter @Inject constructor(
     private val profileRepository: ProfileRepository
 ) : BasePresenter<ProfileView>() {
 
-    private val paginator = Paginator(
-        {
-            postRepository.getPosts(it)
-                .observeOn(AndroidSchedulers.mainThread())
-                .doFinally { viewState.hideProgress() }
-        },
-        object : Paginator.ViewController<Post> {
-
-            override fun showEmptyProgress(show: Boolean) {
-                viewState.showProgress()
-            }
-
-            override fun showEmptyError(show: Boolean, error: Throwable?) {
-                viewState.showErrorFeed()
-            }
-
-            override fun showEmptyView(show: Boolean) {
-                viewState.showEmptyFeed()
-            }
-
-            override fun showData(show: Boolean, data: List<Post>) {
-                viewState.showFeed(data.map {
-                    PostMessage(
-                        it.id,
-                        "Number ${it.id}",
-                        "https://picsum.photos/id/${it.id}/200/300"
-                    )
-                })
-            }
-
-            override fun showErrorMessage(error: Throwable) {
-
-            }
-
-            override fun showRefreshProgress(show: Boolean) {
-                viewState.showProgress()
-            }
-
-            override fun showPageProgress(show: Boolean) {
-
-            }
-
-        }
-    )
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -75,32 +31,16 @@ class ProfileViewPresenter @Inject constructor(
         viewState.showCity(profileRepository.getCity())
         viewState.showBirthday(profileRepository.getBirthday())
         viewState.showPhone(profileRepository.getPhone())
-        paginator.refresh()
-
-        //viewState.showFeed(postRepository.getAll())
-
     }
 
-    fun loadPosts() {
-        paginator.loadNewPage()
-    }
 
-    fun refreshPosts() {
-        paginator.refresh()
+    fun profileEdit() {
+        router.replaceScreen(Screen.ProfileEditScreen())
     }
 
     fun logout() {
         sessionDataSource.clearToken()
         router.newRootScreen(Screen.LoginScreen())
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        paginator.release()
-    }
-
-    fun profileEdit() {
-        router.newRootScreen(Screen.ProfileEditScreen())
     }
 
 }

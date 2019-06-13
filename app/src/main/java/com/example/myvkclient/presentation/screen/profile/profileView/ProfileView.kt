@@ -11,8 +11,6 @@ interface ProfileView : MvpView {
     fun showBirthday(birthday: String)
     fun showPhone(phone: String)
 
-    fun showFeed(items: List<BaseMessage>)
-
     fun showEmptyFeed()
     fun showProgress()
     fun hideProgress()
